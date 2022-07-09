@@ -1,0 +1,41 @@
+.app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  padding-top: 20px;
+  background: linear-gradient(90deg, rgb(186,186,186) 0%, rgb(222,222,222) 35%, rgb(200,200,200) 100%);;
+  /* background-image: url("./images/background.jpg");
+  background-size: 100% 100%; */
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.input-wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  margin: 10px;
+}
+
+.input-wrapper button {
+  border: 1px solid #238787;
+  background-color: #23ABAB;
+  border-radius: 5px;
+  padding: 1.2em;
+  font-size: 1.2em;
+  color: #121212;
+  cursor: pointer;
+}
+
+.input-wrapper button:hover {
+  background-color: #23BCBC;
+}
+
+.input-wrapper label {
+  padding-bottom: 5px;
+  display: inline-block;
+  width: 80px;
+}
+
+.input-wrapper input {
+  padding: 2px;
+}
