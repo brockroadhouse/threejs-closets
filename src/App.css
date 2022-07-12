@@ -36,6 +36,6 @@
   width: 80px;
 }
 
-.input-wrapper input {
+.input-wrapper input, .input-wrapper select {
   padding: 2px;
 }

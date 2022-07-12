@@ -7,9 +7,12 @@ export default function Gable(props: JSX.IntrinsicElements['mesh']) {
     const depth = props.depth ?? 12
 
     const defaultDimension = [thickness, height, depth];
-    const defaultPosition = [-thickness / 2, 0, 0];
+    const defaultPosition = [0, 0, 0];
     const position = props.position ?? defaultPosition;
-    position[1] += height/2
+    const dimensions = props.dimensions ?? defaultDimension;
+    position[0] += dimensions[0] / 2
+    position[1] += dimensions[1] / 2
+    position[2] += dimensions[2] / 2
 
     return <mesh
         position={ position }
@@ -17,7 +20,7 @@ export default function Gable(props: JSX.IntrinsicElements['mesh']) {
      >
     <boxBufferGeometry
         attach="geometry"
-        args={props.dimensions ?? defaultDimension} />
+        args={dimensions} />
         <meshLambertMaterial attach="material"
             color={0xCFCFCF} />
         <Edges color={0x787878}/>

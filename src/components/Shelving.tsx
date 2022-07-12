@@ -20,9 +20,10 @@ export default function Shelving(props: ShelvingProps) {
     }
     const shelving = [];
     const spacing = (height - 0.75) / (shelves - 1);
+    const thickness = 0.75
 
     for (let i = 0; i < props.shelves; i++) {
-        shelving.push(<Shelf key={i} width={width} depth={depth} y={spacing * i} />)
+        shelving.push(<Shelf key={i} x={thickness} width={width} depth={depth} y={spacing * i} />)
     }
 
     return (
@@ -34,7 +35,7 @@ export default function Shelving(props: ShelvingProps) {
             <Gable
                 height={height}
                 depth={depth}
-                position={[(parseFloat(width) + 0.375), 0, 0]} />
+                position={[(parseFloat(width) + thickness), 0, 0]} />
         </>
     );
 }
